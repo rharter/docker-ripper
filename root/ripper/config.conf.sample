@@ -1,0 +1,43 @@
+######################
+# Ripper Parameters
+#
+
+# Minimum length of track for rips (in seconds)
+MINLENGTH=4800
+
+# Maximum length of track for rips (in seconds)
+MAXLENGTH=99999
+
+# Path to raw MakeMKV directory
+# Destination for MakeMKV and source for HandBrake
+RAWPATH=/opt/ripper/media/raw/
+
+# Path to final media directory
+MEDIAPATH=/opt/movies/
+
+LOGPATH=/opt/ripper/logs
+
+SET_MEDIA_PERMISSIONS=true
+CHMOD_VALUE=777
+SET_MEDIA_OWNER=true
+CHOWN_USER=plex
+CHWON_GROUP=plex
+
+######################
+# MakeMKV Parameters
+#
+MKV_ARGS=
+
+########################
+# Handbrake Parameters
+#
+
+# Handbrake preset profile for Blurays
+# Exzecute 'HandBrakeCLI -z' to see a list of all presets
+HB_PRESET_BD=High Profile
+
+# Extension of the final video file
+DEST_EXT=mkv
+
+# Additional Handbrake arguments for Bluray discs
+HB_ARGS_BD=--subtitle scan -F --subtitle-burned --audio-lang-list eng --all-audio
